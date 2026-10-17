@@ -165,7 +165,7 @@
   .hero-media{position:absolute;inset:0;z-index:-2;background:var(--maroon-deep)}
   .hero-media img{width:100%;height:100%;object-fit:cover;object-position:50% 24%;filter:saturate(1.08) contrast(1.02)}
   .hero::before{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(36,12,20,.22) 0%,rgba(36,12,20,.04) 30%,rgba(36,12,20,.08) 55%,rgba(30,8,14,.62) 100%)}
-  .hero-inner{padding:118px 0 64px}
+  .hero-inner{padding:118px 20px 64px}
   .hero-copy{color:var(--hero-ink)}
   .pill{
     display:inline-flex;align-items:center;gap:9px;
@@ -181,8 +181,9 @@
     text-shadow:0 1px 2px rgba(25,6,12,.35),0 8px 40px rgba(25,6,12,.35);
   }
   .hero-copy h1 em{font-style:normal;background:linear-gradient(100deg,var(--gold-bright),var(--gold));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:var(--gold-bright)}
-  .hero-copy .tag{font-size:17px;font-weight:500;color:#F3D9DC;letter-spacing:.01em}
+  .hero-copy .tag{display:none;font-size:17px;font-weight:500;color:#F3D9DC;letter-spacing:.01em}
   .hero-copy .sub{color:rgba(255,248,240,.86);text-align:left;margin:14px 0 0;max-width:470px;font-size:16.5px;line-height:1.55;text-shadow:0 1px 2px rgba(25,6,12,.3)}
+  .hero-copy .sub .sub-long{display:none}
   .hero-ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
   @media(min-width:900px){
     .hero{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr)}
@@ -196,8 +197,10 @@
     }
     .hero-copy h1{font-size:clamp(40px,4.7vw,58px);color:var(--maroon);text-shadow:none}
     .hero-copy h1 em{background:linear-gradient(100deg,#8F641C,#C9A24B);-webkit-background-clip:text;background-clip:text}
-    .hero-copy .tag{color:var(--rose)}
+    .hero-copy .tag{display:block;color:var(--rose)}
     .hero-copy .sub{color:var(--text-2);text-shadow:none;max-width:44ch}
+    .hero-copy .sub .sub-long{display:inline}
+    .hero-copy .sub .sub-short{display:none}
     .hero-copy .pill{background:rgba(201,162,75,.13);box-shadow:inset 0 0 0 1px rgba(201,162,75,.45);color:var(--gold-text)}
     .hero-copy .btn-tint{background:var(--fill);box-shadow:inset 0 0 0 1px var(--sep);color:var(--text);backdrop-filter:none;-webkit-backdrop-filter:none}
     .hero-media{position:static;height:100%}
@@ -436,7 +439,7 @@
       <span class="pill"><i class="di"></i>Rohini, Delhi • Home Service</span>
       <h1>Soft Glam<br>Bridal Looks,<br><em>Created at Home</em></h1>
       <p class="tag">Soft glam • Natural glow</p>
-      <p class="sub">Professional makeup for brides, engagements and every special occasion — done in the comfort of your home, anywhere in Delhi NCR.</p>
+      <p class="sub"><span class="sub-long">Professional makeup for brides, engagements and every special occasion — done in the comfort of your home, anywhere in Delhi NCR.</span><span class="sub-short">Across Delhi NCR • all over India</span></p>
       <div class="hero-ctas">
         <a class="btn btn-gold" href="https://wa.me/918287290819?text=Hi%20Siya!%20I%20would%20like%20to%20book%20a%20makeup%20session." target="_blank" rel="noopener">Book on WhatsApp</a>
         <a class="btn btn-tint" href="#work">View Work</a>
